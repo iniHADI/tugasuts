@@ -83,21 +83,20 @@ Data Exploration:
 
 ```
 -df.head()
+```
 ![Alt text](foto1.jpeg)<br> 
 ```
-```
 -df.info()
-![Alt text](foto2.jpeg)<br> 
 ```
+![Alt text](foto2.jpeg)<br>
 ```
 -sns.heatmap(df.isnull())
+```
 ![Alt text](foto3.jpeg)<br> 
 ```
-```
 -df.describe().T
-![Alt text](foto4.jpeg)<br> 
 ```
-
+![Alt text](foto4.jpeg)<br>
 Visualisasi Data:
 
 Membuat peta panas (heatmap) untuk menggambarkan korelasi antara fitur-fitur data.
@@ -108,8 +107,8 @@ Menampilkan distribusi kelas "quality" dalam data pelatihan.
 ```
 plt.figure(figsize=(10,10))
 sns.heatmap(df.corr(),annot=True,cmap="Blues")
-![Alt text](foto5.jpeg)<br> 
 ```
+![Alt text](foto5.jpeg)<br> 
 Split Data :
 
 Melakukan split data untuk memangkas beberapa data yang dipakai.
@@ -176,15 +175,15 @@ Variabel ini adalah hasil dari penanganan ketidakseimbangan kelas dalam data pel
 
 ```
 df_balanced
-![Alt text](foto6.jpeg)<br> 
 ```
+![Alt text](foto6.jpeg)<br> 
 
 Kode program ini digunakan untuk menghasilkan grafik batang horizontal (horizontal bar chart) yang menunjukkan distribusi kelas (nilai "quality") dalam DataFrame df_balanced.
 
 ```
 df_balanced['quality'].value_counts().plot(kind='barh',color = 'red')
-![Alt text](foto7.jpeg)<br> 
 ```
+![Alt text](foto7.jpeg)<br> 
 
 Kode program berikut adalah bagian dari persiapan data dalam proses analisis atau pemodelan data. Dalam kode ini, variabel X dan y digunakan untuk memisahkan data menjadi fitur (X) dan label (y). Ini umumnya diperlukan ketika Anda ingin membangun model yang akan memprediksi label atau target berdasarkan fitur-fitur yang ada dalam data Anda.
 
@@ -228,8 +227,8 @@ rf = RandomForestClassifier()
 rf.fit(X_train,y_train)
 y_pred_rf = rf.predict(X_val)
 print(classification_report(y_val,y_pred_rf))
-![Alt text](foto8.jpeg)<br> 
 ```
+![Alt text](foto8.jpeg)<br> 
 Hasil accuracy yang didapat lumayan juga,yaitu sebesar 0,87
 
 Sekarang modelnya sudah selesai, export sebagai sav agar nanti bisa  digunakan pada project web streamlit.
@@ -252,8 +251,11 @@ print(classification_report(y_val,y_pred_rf))
 print("Classification Report:\n", classification_rep)
 print("Accuracy Score:", accuracy)
 ```
+![Alt text](foto8.jpeg)<br> 
 
 ### Deployment 
 [app](https://tugasuts-a8hud7dkwdvtth2b5hvkpj.streamlit.app/)
+
+
 ![Alt text](image-1.png)<br> 
 ![Alt text](image-2.png)<br> 
